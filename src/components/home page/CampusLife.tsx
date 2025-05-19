@@ -7,22 +7,44 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 import { GalleryItem } from "@/types/homeGallery";
-import culture from "../../assets/bc2c7ae8-195e-4238-a400-13f1b25e3341.sized-1000x1000.jpg";
-import science from "../../assets/ScienceFair.jpg";
-import library from "../../assets/Library.jpg";
-import sport from "../../assets/Sports-week.jpg";
-import dorm from "../../assets/dorm.jpg";
-import picnic from "../../assets/Picnic.avif";
-import event from "../../assets/events.jpg";
 
 const images: GalleryItem[] = [
-  { title: "Cultural Fest", imageUrl: culture, height: "tall" },
-  { title: "Science Fair", imageUrl: science, height: "small" },
-  { title: "Library", imageUrl: library, height: "small" },
-  { title: "Sports Week", imageUrl: sport, height: "small" },
-  { title: "Dorm", imageUrl: dorm, height: "medium" },
-  { title: "Event", imageUrl: event, height: "tall" },
-  { title: "Picnic", imageUrl: picnic, height: "small" },
+  {
+    title: "Cultural Fest",
+    imageUrl:
+      "https://i.ibb.co/yFz7w57P/bc2c7ae8-195e-4238-a400-13f1b25e3341-sized-1000x1000.jpg",
+    height: "tall",
+  },
+  {
+    title: "Science Fair",
+    imageUrl: "https://i.ibb.co/VWQyZT75/Science-Fair.jpg",
+    height: "small",
+  },
+  {
+    title: "Library",
+    imageUrl: "https://i.ibb.co/LXG43X5z/Library.jpg",
+    height: "small",
+  },
+  {
+    title: "Sports Week",
+    imageUrl: "https://i.ibb.co/1J0yDzVc/Sports-week.jpg",
+    height: "small",
+  },
+  {
+    title: "Dorm",
+    imageUrl: "https://i.ibb.co/d00GTsgD/dorm.jpg",
+    height: "medium",
+  },
+  {
+    title: "Event",
+    imageUrl: "https://i.ibb.co/yBVhjNWf/events.jpg",
+    height: "tall",
+  },
+  {
+    title: "Picnic",
+    imageUrl: "https://i.ibb.co/NnshW7fn/Picnic.jpg",
+    height: "small",
+  },
 ];
 
 const heightMap: Record<GalleryItem["height"], string> = {
@@ -37,13 +59,13 @@ export default function CampusLife() {
 
   // Prepare array for lightbox images in required format
   const slides = images.map((img) => ({
-    src: img.imageUrl.src || img.imageUrl, // for imported static images, use src
+    src: img.imageUrl,
     alt: img.title,
   }));
 
   return (
     <section className="bg-white w-11/12 mx-auto dark:bg-[#161929]">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -66,20 +88,21 @@ export default function CampusLife() {
           {images.map((img, index) => (
             <motion.div
               key={index}
+              role="button"
+              tabIndex={0}
+              aria-label={`Open image: ${img.title}`}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative w-full overflow-hidden rounded-xl shadow-lg group transition-shadow duration-300 hover:shadow-2xl cursor-pointer ${
-                heightMap[img.height]
-              }`}
-              // Open lightbox on click, set current index
               onClick={() => {
                 setPhotoIndex(index);
                 setOpen(true);
               }}
-              // Parallax-like zoom on scroll (scale from 0.95 to 1.05 as user scrolls into view)
               whileHover={{ scale: 1.05 }}
+              className={`relative w-full overflow-hidden rounded-xl shadow-lg group transition-shadow duration-300 hover:shadow-2xl cursor-pointer ${
+                heightMap[img.height]
+              } before:content-[''] before:absolute before:inset-0 before:bg-black/10 before:backdrop-blur-sm before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300`}
             >
               <Image
                 src={img.imageUrl}
@@ -100,7 +123,6 @@ export default function CampusLife() {
         close={() => setOpen(false)}
         slides={slides}
         index={photoIndex}
-        onIndexChange={setPhotoIndex}
         animation={{ fade: 300 }}
       />
     </section>

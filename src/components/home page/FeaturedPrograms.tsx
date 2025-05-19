@@ -17,7 +17,7 @@ export default function FeaturedPrograms({ programs }: FeaturedProgramsProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="w-full max-sm:px-5 sm:w-11/12 mx-auto bg-white dark:bg-[#161929]">
+    <section className="w-full max-sm:px-5 bg-white dark:bg-[#161929]">
       <div className="text-center mb-10">
         <h2 className="text-3xl sm:text-4xl font-bold text-[#008080] dark:text-white">
           Academic Programs
@@ -45,7 +45,7 @@ export default function FeaturedPrograms({ programs }: FeaturedProgramsProps) {
           }}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           onSwiper={(swiper) => setSwiperInstance(swiper)}
-          className=" w-11/12 mx-auto"
+          className="w-11/12 mx-auto"
         >
           {programs.map((program, index) => (
             <SwiperSlide key={index} className="h-auto">

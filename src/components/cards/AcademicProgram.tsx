@@ -9,10 +9,10 @@ interface ProgramCardProps {
 
 export default function AcademicProgram({ program }: ProgramCardProps) {
   return (
-    <div className="h-[180px] sm:h-[350px] md:h-[280px] lg:h-[430px]">
+    <div className="h-[180px] sm:h-[350px] md:h-[280px] lg:h-[500px]">
       <Link
         href={program.link}
-        className="relative group flex-1 rounded-xl overflow-hidden bg-neutral-900"
+        className="relative group flex-1 overflow-hidden bg-neutral-900"
       >
         {/* Background Image */}
         <div className="absolute inset-0">
@@ -33,7 +33,7 @@ export default function AcademicProgram({ program }: ProgramCardProps) {
                 fill
                 sizes="100%"
                 priority
-                className="object-cover"
+                className="object-cover rounded-xl"
               />
             </motion.div>
           </motion.div>

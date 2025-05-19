@@ -3,6 +3,7 @@ import AdmissionsCall from "@/components/home page/AdmissionsCall";
 import Banner from "@/components/home page/Banner";
 import CampusLife from "@/components/home page/CampusLife";
 import FeaturedPrograms from "@/components/home page/FeaturedPrograms";
+import UpcomingEvents from "@/components/home page/UpcomingEvents";
 import { Academics } from "@/types/academics";
 
 export default function Home() {
@@ -111,6 +112,7 @@ export default function Home() {
       <FeaturedPrograms programs={programs} />
       <AdmissionsCall />
       <CampusLife />
+      <UpcomingEvents />
     </div>
   );
 }
