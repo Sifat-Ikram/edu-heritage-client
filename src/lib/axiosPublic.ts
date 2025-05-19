@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const axiosPublic = axios.create({
-    baseURL: "http://localhost:4321",
+    baseURL: "https://edu-heritage-server.vercel.app",
     headers: {
         'Content-Type': 'application/json',
     },

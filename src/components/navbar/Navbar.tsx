@@ -2,13 +2,20 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaBars, FaTimes, FaSignInAlt, FaSignOutAlt, FaUserPlus } from 'react-icons/fa';
+import { FiSearch } from "react-icons/fi";
 import { useAuth } from '@/context/AuthContext';
+import { FaBars, FaTimes, FaSignInAlt, FaSignOutAlt, FaUserPlus } from 'react-icons/fa';
+import SearchOverlay from './SearchOverlay';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
     const { user, logout } = useAuth();
+    const [showSearch, setShowSearch] = useState(false);
+
+    const toggleSearch = () => {
+        setShowSearch(prev => !prev);
+    };
 
     const toggleDropdown = (index) => {
         setOpenDropdownIndex(openDropdownIndex === index ? null : index);
@@ -89,152 +96,164 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="bg-[#008080] shadow-md w-full z-50 font-roboto sticky">
-            <div className="w-11/12 mx-auto">
-                <div className="flex justify-between items-center">
-                    {/* Logo */}
-                    <Link href="/" className="flex items-center">
-                        <span className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-white hover:text-[#B0BEC5]">EduHeritage</span>
-                    </Link>
+        <>
+            <nav className="bg-[#008080] dark:bg-[#161929] shadow-md w-full z-50 font-roboto fixed">
+                <div className="w-11/12 mx-auto">
+                    <div className="flex justify-between items-center">
+                        {/* Logo */}
+                        <Link href="/" className="flex items-center">
+                            <span className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-white hover:text-[#B0BEC5]">EduHeritage</span>
+                        </Link>
 
-                    {/* Desktop Menu */}
-                    <div className="flex justify-center items-center space-x-2 sm:space-x-3.5 md:space-x-6 roboto-slab">
-                        <div className="hidden md:flex items-center space-x-5 relative">
-                            {navItems.map((item) => (
-                                item.dropdown ? (
-                                    <div className="relative group hover:cursor-pointer" key={item?.label}>
-                                        <button className="text-white text-xl hover:cursor-pointer hover:text-[#B0BEC5] font-medium py-5">
-                                            {item.label}
-                                        </button>
-                                        {/* Dropdown Menu */}
-                                        <div className="absolute -left-10 top-16 hidden bg-[#008080] group-hover:block shadow-lg rounded-md w-auto space-y-2 py-2 px-5">
-                                            {item.dropdown.map((dropdownItem) => (
-                                                <Link
-                                                    key={dropdownItem.label}
-                                                    href={dropdownItem.href}
-                                                    className="block text-white hover:text-[#B0BEC5] text-nowrap"
-                                                >
-                                                    {dropdownItem.label}
-                                                </Link>
-                                            ))}
+                        {/* Desktop Menu */}
+                        <div className="flex justify-center items-center space-x-2 sm:space-x-3.5 md:space-x-6 roboto-slab">
+                            <div className="hidden lg:flex items-center space-x-5 relative">
+                                {navItems.map((item) => (
+                                    item.dropdown ? (
+                                        <div className="relative group hover:cursor-pointer" key={item?.label}>
+                                            <button className="text-white text-xl hover:cursor-pointer hover:text-[#B0BEC5] font-medium py-5">
+                                                {item.label}
+                                            </button>
+                                            {/* Dropdown Menu */}
+                                            <div className="absolute -left-10 top-16 hidden bg-[#008080] dark:bg-[#161929] group-hover:block shadow-lg rounded-md w-auto space-y-2 py-2 px-5">
+                                                {item.dropdown.map((dropdownItem) => (
+                                                    <Link
+                                                        key={dropdownItem.label}
+                                                        href={dropdownItem.href}
+                                                        className="block text-white hover:text-[#B0BEC5] text-nowrap dark:bg-[#161929]"
+                                                    >
+                                                        {dropdownItem.label}
+                                                    </Link>
+                                                ))}
+                                            </div>
                                         </div>
-                                    </div>
-                                ) : (
-                                    <Link
-                                        key={item.label}
-                                        href={item.href}
-                                        className="text-white hover:text-[#B0BEC5] font-medium"
-                                    >
-                                        {item.label}
-                                    </Link>
-                                )
-                            ))}
-                        </div>
-                        {
-                            user ? <>
-                                <Link onClick={handleLogout} href="/" className="text-white hover:text-[#B0BEC5]">
-                                    <FaSignOutAlt className='text-xl md:text-lg' title="Logout" />
-                                </Link>
-                            </> : <div className="hidden sm:flex space-x-2 sm:space-x-3 md:space-x-6 items-center">
-                                <Link href="/auth/login" className="text-white hover:text-[#B0BEC5]">
-                                    <FaSignInAlt className='text-xl md:text-lg' title="Login" />
-                                </Link>
-                                <Link href="/auth/register" className="text-white hover:text-[#B0BEC5]">
-                                    <FaUserPlus className='text-xl md:text-lg' title="Register" />
-                                </Link>
+                                    ) : (
+                                        <Link
+                                            key={item.label}
+                                            href={item.href}
+                                            className="text-white hover:text-[#B0BEC5] font-medium dark:bg-[#161929] dark:bprder-b-2 border-white"
+                                        >
+                                            {item.label}
+                                        </Link>
+                                    )
+                                ))}
                             </div>
-                        }
-                        {/* Mobile Hamburger */}
-                        <div className="md:hidden">
-                            <button
-                                onClick={() => setMenuOpen(!menuOpen)}
-                                className="text-white hover:text-[#B0BEC5] focus:outline-none py-5"
-                            >
-                                {menuOpen ? <FaTimes className='sm:text-xl md:text-lg' /> : <FaBars className='sm:text-xl md:text-lg' />}
+                            <button onClick={toggleSearch} className='rounded-lg hidden cursor-pointer md:flex items-center space-x-[6px] text-lg font-semibold py-1 px-[10px] hover:bg-white bg-transparent hover:text-[#008080] dark:hover:text-gray-800 text-white'>
+                                <FiSearch className='text-lg font-black' />
+                                <h1>Search</h1>
                             </button>
+                            <button onClick={toggleSearch} className=' text-white block md:hidden hover:text-[#B0BEC5] dark:hover:text-gray-800 cursor-pointer'>
+                                <FiSearch className='text-lg font-black' />
+                            </button>
+                            <div className="flex justify-center items-center space-x-2 sm:space-x-3.5 md:space-x-6 roboto-slab">
+                                {
+                                    user ? <>
+                                        <Link onClick={handleLogout} href="/" className="text-white hover:text-[#B0BEC5]">
+                                            <FaSignOutAlt className='text-xl md:text-lg' title="Logout" />
+                                        </Link>
+                                    </> : <div className="hidden sm:flex space-x-2 sm:space-x-3 md:space-x-6 items-center">
+                                        <Link href="/auth/login" className="text-white hover:text-[#B0BEC5]">
+                                            <FaSignInAlt className='text-xl md:text-lg' title="Login" />
+                                        </Link>
+                                        <Link href="/auth/register" className="text-white hover:text-[#B0BEC5]">
+                                            <FaUserPlus className='text-xl md:text-lg' title="Register" />
+                                        </Link>
+                                    </div>
+                                }
+                            </div>
+                            {/* Mobile Hamburger */}
+                            <div className="lg:hidden">
+                                <button
+                                    onClick={() => setMenuOpen(!menuOpen)}
+                                    className="text-white hover:text-[#B0BEC5] focus:outline-none py-5"
+                                >
+                                    {menuOpen ? <FaTimes className='sm:text-xl md:text-lg' /> : <FaBars className='sm:text-xl md:text-lg' />}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Mobile Menu */}
-            {menuOpen && (
-                <motion.div
-                    className="md:hidden bg-[#008080] shadow-lg py-1 absolute z-50 top-14 w-32 sm:w-40 text-center sm:text-right right-0"
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -10 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
-                >
-                    {navItems.map((item, index) => (
-                        <div
-                            key={item.label}
-                            className="group"
-                        >
-                            {/* Menu Item */}
-                            <h1
-                                className={`
+                {/* Mobile Menu */}
+                {menuOpen && (
+                    <motion.div
+                        className="md:hidden bg-[#008080] dark:bg-[#161929] shadow-lg py-1 absolute z-50 top-14 w-32 sm:w-40 text-center sm:text-right right-0"
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -10 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    >
+                        {navItems.map((item, index) => (
+                            <div
+                                key={item.label}
+                                className="group"
+                            >
+                                {/* Menu Item */}
+                                <h1
+                                    className={`
             block text-white hover:cursor-pointer px-2 sm:px-5 py-3 
             ${index === 0 ? 'border-b-[0.050px] border-transparent hover:border-white' : ''}
             ${index !== 0 ? 'border-y-[0.050px] border-transparent hover:border-white' : ''}
             hover:text-[#B0BEC5] transition-all duration-300 ease-in-out
           `}
-                                onClick={() => toggleDropdown(index)}
-                            >
-                                {item.label}
-                            </h1>
-
-                            {/* Dropdown for mobile */}
-                            {item.dropdown && openDropdownIndex === index && (
-                                <motion.div
-                                    className="absolute right-[129.50px] sm:right-[160.52px] top-10 bg-[#008080] group-hover:block shadow-lg rounded-md w-40 sm:w-auto space-y-2 py-2 px-5"
-                                    initial={{ opacity: 0, x: -10 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    exit={{ opacity: 0, x: -10 }}
-                                    transition={{ duration: 0.3, ease: 'easeInOut' }}
-                                    onMouseEnter={() => setMenuOpen(true)} // Hide menu when mouse leaves
+                                    onClick={() => toggleDropdown(index)}
                                 >
-                                    {item.dropdown.map((dropdownItem) => (
-                                        <Link
-                                            key={dropdownItem.label}
-                                            href={dropdownItem.href}
-                                            className="block text-white hover:text-[#B0BEC5] px-2 sm:px-5 sm:text-nowrap"
-                                        >
-                                            {dropdownItem.label}
-                                        </Link>
-                                    ))}
-                                </motion.div>
-                            )}
-                        </div>
-                    ))}
+                                    {item.label}
+                                </h1>
 
-                    {
-                        user ? <>
-                            <Link href="/" className="text-white hover:text-[#B0BEC5]">
-                                <h1
-                                    onClick={() => {
-                                        setMenuOpen(false);
-                                        handleLogout();
-                                    }}
-                                    className="block text-white hover:cursor-pointer px-2 sm:px-5 py-3 border-y-[0.050px] border-transparent hover:border-white">Logout</h1>
-                            </Link>
-                        </> : <div className='flex flex-col sm:hidden'>
-                            <Link href="/auth/login" className="text-white hover:text-[#B0BEC5]">
-                                <h1
-                                    onClick={() => setMenuOpen(false)}
-                                    className="block text-white hover:cursor-pointer px-2 sm:px-5 py-3 border-y-[0.050px] border-transparent hover:border-white">Login</h1>
-                            </Link>
-                            <Link href="/auth/register" className="text-white hover:text-[#B0BEC5]">
-                                <h1
-                                    onClick={() => setMenuOpen(false)}
-                                    className="block text-white hover:cursor-pointer px-2 sm:px-5 py-3 border-t-[0.050px] border-transparent hover:border-white">Register</h1>
-                            </Link>
-                        </div>
-                    }
-                </motion.div>
-            )}
+                                {/* Dropdown for mobile */}
+                                {item.dropdown && openDropdownIndex === index && (
+                                    <motion.div
+                                        className="absolute right-[129.50px] sm:right-[160.52px] top-10 bg-[#008080] dark:bg-[#161929] group-hover:block shadow-lg rounded-md w-40 sm:w-auto space-y-2 py-2 px-5"
+                                        initial={{ opacity: 0, x: -10 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        exit={{ opacity: 0, x: -10 }}
+                                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                        onMouseEnter={() => setMenuOpen(true)} // Hide menu when mouse leaves
+                                    >
+                                        {item.dropdown.map((dropdownItem) => (
+                                            <Link
+                                                key={dropdownItem.label}
+                                                href={dropdownItem.href}
+                                                className="block text-white hover:text-[#B0BEC5] px-2 sm:px-5 sm:text-nowrap"
+                                            >
+                                                {dropdownItem.label}
+                                            </Link>
+                                        ))}
+                                    </motion.div>
+                                )}
+                            </div>
+                        ))}
 
-        </nav>
+                        {
+                            user ? <>
+                                <Link href="/" className="text-white hover:text-[#B0BEC5]">
+                                    <h1
+                                        onClick={() => {
+                                            setMenuOpen(false);
+                                            handleLogout();
+                                        }}
+                                        className="block text-white hover:cursor-pointer px-2 sm:px-5 py-3 border-y-[0.050px] border-transparent hover:border-white">Logout</h1>
+                                </Link>
+                            </> : <div className='flex flex-col sm:hidden'>
+                                <Link href="/auth/login" className="text-white hover:text-[#B0BEC5]">
+                                    <h1
+                                        onClick={() => setMenuOpen(false)}
+                                        className="block text-white hover:cursor-pointer px-2 sm:px-5 py-3 border-y-[0.050px] border-transparent hover:border-white">Login</h1>
+                                </Link>
+                                <Link href="/auth/register" className="text-white hover:text-[#B0BEC5]">
+                                    <h1
+                                        onClick={() => setMenuOpen(false)}
+                                        className="block text-white hover:cursor-pointer px-2 sm:px-5 py-3 border-t-[0.050px] border-transparent hover:border-white">Register</h1>
+                                </Link>
+                            </div>
+                        }
+                    </motion.div>
+                )}
+
+            </nav>
+            <SearchOverlay isOpen={showSearch} onClose={() => setShowSearch(false)} />
+        </>
     );
 };
 
