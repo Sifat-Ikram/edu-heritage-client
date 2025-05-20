@@ -5,4 +5,5 @@ export interface EventItem {
   time: string;
   location: string;
   imageUrl: string;
+  slug: string;
 }

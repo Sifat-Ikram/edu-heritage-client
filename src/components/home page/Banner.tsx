@@ -19,7 +19,7 @@ const Banner = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 dark:text-white max-lg:text-center"
+            className="title-text leading-tight mb-6 dark:text-white max-lg:text-center"
           >
             Empowering Minds, Shaping Futures
           </motion.h1>
@@ -28,7 +28,7 @@ const Banner = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-base sm:text-lg mb-8 dark:text-white max-lg:text-center"
+            className="paragraph-text mb-8 dark:text-white max-lg:text-center"
           >
             Join a legacy of excellence. Discover programs, research, and
             opportunities that will define your academic journey.
@@ -53,7 +53,7 @@ const Banner = () => {
               className=""
             >
               <Link href="/about">
-                <button className="buttons btn-learn dark:bg-transparent dark:!border-white dark:!text-white hover:!bg-white hover:!text-gray-800">
+                <button className="buttons btn-learn hover:bg-teal-700 hover:text-white dark:bg-transparent dark:!border-white dark:!text-white dark:hover:!bg-white dark:hover:!text-gray-800">
                   Learn More
                 </button>
               </Link>

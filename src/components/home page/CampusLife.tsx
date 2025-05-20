@@ -65,7 +65,7 @@ export default function CampusLife() {
 
   return (
     <section className="bg-white w-11/12 mx-auto dark:bg-[#161929]">
-      <div className="w-full">
+      <div className="w-full space-y-6 sm:space-y-10 md:space-y-14 lg:space-y-20">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -74,17 +74,13 @@ export default function CampusLife() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-3xl md:text-2xl lg:text-4xl font-bold text-gray-800 dark:text-white">
-            Explore Campus Life
+          <h2 className="title-text text-gray-800 dark:text-white">
+            Photo Gallery
           </h2>
-          <p className="mt-3 text-gray-600 dark:text-white max-w-xl mx-auto text-sm md:text-base">
-            A colorful blend of academics, culture, and community captured
-            through our students’ eyes.
-          </p>
         </motion.div>
 
         {/* Masonry Gallery */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 sm:gap-4 mt-10 sm:mt-12 space-y-3 sm:space-y-4">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 sm:gap-4 space-y-3 sm:space-y-4">
           {images.map((img, index) => (
             <motion.div
               key={index}

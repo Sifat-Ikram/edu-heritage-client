@@ -1,8 +1,8 @@
-
-export interface Academics {
-    id: number;
+export interface AcademicCardProps {
+  item: {
     title: string;
     description: string;
-    image1: string;
+    image: string;
     link: string;
+  };
 }

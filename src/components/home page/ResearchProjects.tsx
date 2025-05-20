@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import AcademicProgram from "../cards/AcademicProgram";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
@@ -10,102 +10,104 @@ import { useEffect, useState } from "react";
 const programs = [
   {
     id: 1,
-    title: "Undergraduate Programs",
+    title: "Artificial Intelligence Research",
     description:
-      "Build foundational skills and explore your passions across various fields.",
+      "Pushing the boundaries of machine learning, robotics, and cognitive systems.",
     image: "https://i.ibb.co/XkpnFsc6/Programming-in-Computer-Science.jpg",
-    link: "/programs/undergraduate",
+    link: "/research/ai",
   },
   {
     id: 2,
-    title: "Graduate Programs",
+    title: "Climate Change and Sustainability",
     description:
-      "Advance your career and research potential with specialized degrees.",
+      "Investigating solutions for global warming, renewable energy, and sustainable living.",
     image: "https://i.ibb.co/pBtzCkv1/img1.png",
-    link: "/programs/graduate",
+    link: "/research/climate",
   },
   {
     id: 3,
-    title: "Professional Studies",
+    title: "Biomedical Innovations",
     description:
-      "Enhance practical knowledge with executive and industry-aligned programs.",
+      "Developing new technologies for diagnostics, treatment, and public health.",
     image:
       "https://i.ibb.co/6cSw9r3d/taylors-professional-studies-acca-fia-hero-banner-1920x1080.png",
-    link: "/programs/professional",
+    link: "/research/biomedical",
   },
   {
     id: 4,
-    title: "Engineering & Technology",
+    title: "Renewable Energy Systems",
     description:
-      "Explore applied sciences and real-world problem solving in tech.",
+      "Exploring solar, wind, and other renewable sources to power the future.",
     image: "https://i.ibb.co/3qkj8m4/banner-dep-1-1-9-1.png",
-    link: "/programs/engineering",
+    link: "/research/energy",
   },
   {
     id: 5,
-    title: "Health Sciences",
-    description: "Study to innovate and improve health outcomes worldwide.",
+    title: "Public Health & Epidemiology",
+    description:
+      "Studying disease patterns and health interventions worldwide.",
     image: "https://i.ibb.co/d4t0Xmqn/bmb.jpg",
-    link: "/programs/health",
+    link: "/research/public-health",
   },
   {
     id: 6,
-    title: "Business & Economics",
-    description: "Master economics, finance, and global business strategies.",
+    title: "Economic Development Studies",
+    description:
+      "Analyzing policies, markets, and development in emerging economies.",
     image: "https://i.ibb.co/rGdDZG43/buisness.jpg",
-    link: "/programs/business-economics",
+    link: "/research/economics",
   },
   {
     id: 7,
-    title: "Arts & Humanities",
+    title: "Cultural Heritage & Digital Humanities",
     description:
-      "Engage with culture, history, and creative expression across time and place.",
+      "Preserving culture and history through modern technology and research.",
     image: "https://i.ibb.co/Q7DKTKDg/students-study-computer-graphs.jpg",
-    link: "/programs/arts-humanities",
+    link: "/research/humanities",
   },
   {
     id: 8,
-    title: "Environmental Studies",
+    title: "Environmental Conservation",
     description:
-      "Explore sustainability and environmental challenges facing the modern world.",
+      "Researching biodiversity, ecosystems, and conservation technologies.",
     image: "https://i.ibb.co/qYfNnbqQ/What-does-undergraduate-mean-02.webp",
-    link: "/programs/environmental-studies",
+    link: "/research/environment",
   },
   {
     id: 9,
-    title: "Law & Policy",
+    title: "Legal Studies and Human Rights",
     description:
-      "Gain a deep understanding of legal systems and policy-making processes.",
+      "Investigating justice systems, policy reforms, and international law.",
     image: "https://i.ibb.co/xqsfC3Yz/cq5dam-web-808-454.webp",
-    link: "/programs/law-policy",
+    link: "/research/law",
   },
   {
     id: 10,
-    title: "Media & Communication",
+    title: "Media, Technology & Society",
     description:
-      "Learn to shape stories and communicate effectively in the digital age.",
+      "Studying digital communication, media ethics, and societal impacts.",
     image: "https://i.ibb.co/3919TZgJ/images.jpg",
-    link: "/programs/media-communication",
+    link: "/research/media",
   },
   {
     id: 11,
-    title: "Education",
+    title: "Education Systems & Innovation",
     description:
-      "Prepare to lead in classrooms and educational innovation environments.",
+      "Exploring new teaching methods, policy reforms, and learning technologies.",
     image: "https://i.ibb.co/C55xbK2w/bmb-2.jpg",
-    link: "/programs/education",
+    link: "/research/education",
   },
   {
     id: 12,
-    title: "Psychology",
+    title: "Neuroscience and Psychology",
     description:
-      "Understand human behavior and mental processes with scientific insight.",
+      "Uncovering the complexities of brain function, behavior, and mental health.",
     image: "https://i.ibb.co/xSw61kw8/buiss-1-980.webp",
-    link: "/programs/psychology",
+    link: "/research/psychology",
   },
 ];
 
-export default function FeaturedPrograms() {
+export default function ResearchProjects() {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -119,10 +121,10 @@ export default function FeaturedPrograms() {
     <section className="w-full max-sm:px-5 bg-white dark:bg-[#161929] space-y-6 sm:space-y-10 md:space-y-14 lg:space-y-20">
       <div className="text-center">
         <h2 className="title-text text-gray-800 dark:text-white">
-          Academic Programs
+          Research Highlights
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mt-3 paragraph-text">
-          Explore top programs built for the leaders and innovators of tomorrow.
+          Explore groundbreaking research from our leading faculty and students.
         </p>
       </div>
 
@@ -136,19 +138,15 @@ export default function FeaturedPrograms() {
         ) : programs && programs.length > 0 ? (
           <div className="relative">
             <Swiper
-              modules={[Navigation, Autoplay]}
+              modules={[Navigation]}
               spaceBetween={10}
               slidesPerView={2}
               loop={false}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
               breakpoints={{
                 0: { slidesPerView: 2 }, // extra small
-                640: { slidesPerView: 3 }, // mobile
-                768: { slidesPerView: 4 }, // tablet
-                1024: { slidesPerView: 5 }, // desktop
+                640: { slidesPerView: 2 }, // mobile
+                768: { slidesPerView: 3 }, // tablet
+                1024: { slidesPerView: 4 }, // desktop
               }}
               onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
               onSwiper={(swiper) => setSwiperInstance(swiper)}

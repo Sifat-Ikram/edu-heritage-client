@@ -9,25 +9,76 @@
 /* Base button styles */
 .buttons {
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 20px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 
-  font-size: 16px;
-  padding: 8px 16px;
+  font-size: 14px;
+  padding: 5px 13px;
+}
+
+.title-text {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.paragraph-text {
+  font-size: 14px;
 }
 
 @media (min-width: 640px) {
   .buttons {
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+  .title-text {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .paragraph-text {
+    font-size: 14px;
   }
 }
 
 @media (min-width: 768px) {
   .buttons {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+  .paragraph-text {
+    font-size: 16px;
+  }
+  .title-text {
+    font-size: 22px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1000px) {
+  .title-text {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .paragraph-text {
     font-size: 20px;
-    padding: 12px 24px;
+  }
+  .buttons {
+    font-size: 20px;
+    padding: 12px 28px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .title-text {
+    font-size: 70px;
+    font-weight: 700;
+  }
+  .paragraph-text {
+    font-size: 40px;
+  }
+  .buttons {
+    font-size: 40px;
+    padding: 12px 28px;
   }
 }
 
@@ -43,7 +94,7 @@
 
 /* === Learn More button styles === */
 .btn-learn {
-  border: 1px solid #008080;
+  border: 2px solid #008080;
   color: #008080;
   background-color: transparent;
 }
