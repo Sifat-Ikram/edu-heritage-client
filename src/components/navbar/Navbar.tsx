@@ -4,10 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FiSearch } from "react-icons/fi";
 import { useAuth } from "@/context/AuthContext";
-import {
-  FaBars,
-  FaTimes,
-} from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import SearchOverlay from "./SearchOverlay";
 
 const Navbar = () => {
@@ -116,7 +113,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-[#008080] dark:bg-[#161929] shadow-md w-full z-50 font-roboto fixed">
+      <nav
+        className="sticky top-0 bg-[#008080] dark:bg-[#161929] shadow-md w-full left-0 font-roboto"
+        style={{ zIndex: 9999 }}
+      >
         <div className="w-11/12 mx-auto">
           <div className="flex justify-between items-center">
             {/* Logo */}

@@ -6,7 +6,7 @@ const AdmissionsCall = () => {
 
     
   return (
-    <section className="bg-[#008080] dark:bg-[#161929] w-full pt-10 sm:py-14 md:py-16 lg:py-20">
+    <section className="bg-[#008080] dark:bg-[#161929] w-full pt-10 sm:py-14 md:py-16 lg:py-20 font-roboto">
       <div className="max-sm:px-5 sm:w-11/12 mx-auto flex flex-col-reverse lg:flex-row items-center gap-10">
         {/* Text Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left flex flex-col max-lg:items-center gap-4 md:gap-5 lg:gap-4 xl:gap-12">

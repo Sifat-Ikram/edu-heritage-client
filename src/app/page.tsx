@@ -6,11 +6,12 @@ import FeaturedPrograms from "@/components/home page/FeaturedPrograms";
 import FindUs from "@/components/home page/FindUs";
 import QuestionAnswer from "@/components/home page/QuestionAnswer";
 import ResearchProjects from "@/components/home page/ResearchProjects";
+import TestimonialCarousel from "@/components/home page/TestimonialCarousel";
 import UpcomingEvents from "@/components/home page/UpcomingEvents";
 
 export default function Home() {
   return (
-    <div className="flex flex-col space-y-20 lg:space-y-40 dark:bg-[#161929]">
+    <div className="flex flex-col space-y-20 lg:space-y-28 xl:space-y-40 dark:bg-[#161929]">
       <Banner />
       <AboutSection />
       <FeaturedPrograms />
@@ -19,6 +20,7 @@ export default function Home() {
       <CampusLife />
       <ResearchProjects />
       <QuestionAnswer />
+      <TestimonialCarousel />
       <FindUs />
     </div>
   );

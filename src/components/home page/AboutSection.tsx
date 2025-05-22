@@ -6,7 +6,7 @@ import { MdOutlineEmojiEvents } from "react-icons/md";
 
 const AboutSection = () => {
   return (
-    <section className="w-full max-sm:px-5 sm:w-11/12 mx-auto bg-white dark:bg-[#161929] space-y-6 sm:space-y-10 md:space-y-14 lg:space-y-20">
+    <section className="w-full max-sm:px-5 sm:w-11/12 mx-auto font-roboto bg-white dark:bg-[#161929] space-y-6 sm:space-y-10 md:space-y-14 lg:space-y-20">
       <div className="text-center">
         <h2 className="title-text text-gray-800 dark:text-white mb-6">
           About Our University

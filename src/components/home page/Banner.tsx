@@ -6,7 +6,7 @@ import banner from "../../assets/banner.webp";
 
 const Banner = () => {
   return (
-    <section className="overflow-hidden pt-28 pb-8 dark:bg-[#161929]">
+    <section className="overflow-hidden pt-28 pb-8 dark:bg-[#161929] font-roboto">
       <div className="w-11/12 mx-auto flex font-roboto flex-col-reverse lg:flex-row items-center justify-between gap-12">
         {/* Text Content */}
         <motion.div

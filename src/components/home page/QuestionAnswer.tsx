@@ -45,7 +45,7 @@ export default function QuestionAnswer() {
   };
 
   return (
-    <section className="w-11/12 mx-auto dark:bg-[#161929]">
+    <section className="w-11/12 mx-auto dark:bg-[#161929] font-roboto">
       <h2 className="title-text text-center dark:text-white mb-10">
         Frequently Asked Questions
       </h2>

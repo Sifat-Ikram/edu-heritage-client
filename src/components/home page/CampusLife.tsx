@@ -64,7 +64,7 @@ export default function CampusLife() {
   }));
 
   return (
-    <section className="bg-white w-11/12 mx-auto dark:bg-[#161929]">
+    <section className="bg-white w-11/12 mx-auto dark:bg-[#161929] font-roboto">
       <div className="w-full space-y-6 sm:space-y-10 md:space-y-14 lg:space-y-20">
         {/* Section Header */}
         <motion.div
