@@ -6,14 +6,14 @@ import banner from "../../assets/banner.webp";
 
 const Banner = () => {
   return (
-    <section className="overflow-hidden pt-28 pb-8 dark:bg-[#161929] font-roboto">
-      <div className="w-11/12 mx-auto flex font-roboto flex-col-reverse lg:flex-row items-center justify-between gap-12">
+    <section className="overflow-hidden py-8 dark:bg-[#161929] font-roboto">
+      <div className="w-11/12 mx-auto flex font-roboto flex-col-reverse lg:flex-row items-center lg:justify-between lg:gap-12">
         {/* Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full lg:w-1/2 items-center max-sm:justify-center"
+          className="w-full lg:w-1/2 xl:w-2/5 items-center max-sm:justify-center"
         >
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -66,14 +66,14 @@ const Banner = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="w-full lg:w-1/2 flex max-sm:justify-center"
+          className="w-full lg:w-1/2 xl:w-2/5 flex max-lg:justify-center"
         >
           <Image
             src={banner}
             alt="University Campus"
             width={600}
             height={600}
-            className="rounded-xl shadow-xl object-cover h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] w-full max-w-xs sm:max-w-md md:max-w-lg"
+            className="rounded-xl shadow-xl object-cover h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] w-full"
             priority
           />
         </motion.div>

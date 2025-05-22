@@ -3,7 +3,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   return (
-    <div className="relative bg-white dark:bg-white shadow-xl rounded-sm px-6 py-10 sm:px-10 sm:py-12 w-full mx-auto text-center">
+    <div className="relative bg-white dark:bg-white shadow-xl rounded-sm px-6 w-full mx-auto text-center">
       <div className="mb-5 sm:mb-9 md:mb-9 lg:mb-11 xl:mb-14">
         {/* Quotation Icon */}
         <FaQuoteLeft className="text-3xl sm:text-4xl lg:text-5xl text-teal-600 dark:text-gray-800 mb-4 mx-auto opacity-70" />

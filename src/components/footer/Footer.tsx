@@ -23,7 +23,7 @@ const Footer = () => {
         {/* About */}
         <div>
           <h3 className="font-semibold mb-4 title-text">Edu Heritage</h3>
-          <p className=" text-sm lg:text-lg xl:text-3xl leading-relaxed max-md:max-w-2xl">
+          <p className=" text-sm lg:text-lg xl:text-xl leading-relaxed max-md:max-w-2xl">
             Empowering future leaders through academic excellence and vibrant
             campus life. Visit us and be part of a legacy.
           </p>
@@ -33,15 +33,15 @@ const Footer = () => {
         <div className="space-y-4 flex flex-col items-center md:items-start">
           <h3 className="paragraph-text font-semibold mb-4">Contact Us</h3>
           <div className="gap-[6px] sm:gap-3 md:gap-4 flex flex-col items-center md:items-start">
-            <div className="flex items-center gap-[6px] text-[10px] sm:text-sm lg:text-lg xl:text-3xl">
+            <div className="flex items-center gap-[6px] text-[10px] sm:text-sm lg:text-lg xl:text-xl">
               <FaPhoneAlt className="text-white" />
               <span>+880-123-456789</span>
             </div>
-            <div className="flex items-center gap-[6px] text-[10px] sm:text-sm lg:text-lg xl:text-3xl">
+            <div className="flex items-center gap-[6px] text-[10px] sm:text-sm lg:text-lg xl:text-xl">
               <FaEnvelope className="text-white" />
               <span>info@eduheritage.edu</span>
             </div>
-            <div className="flex items-center gap-[6px] text-[10px] sm:text-sm lg:text-lg xl:text-3xl">
+            <div className="flex items-center gap-[6px] text-[10px] sm:text-sm lg:text-lg xl:text-xl">
               <FaMapMarkerAlt className="text-white" />
               <span>University Avenue, Sylhet, Bangladesh</span>
             </div>

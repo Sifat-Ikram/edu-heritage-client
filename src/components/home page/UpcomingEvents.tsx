@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { EventItem } from "@/types/homeEvents";
 import { useEffect, useRef, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -146,9 +146,10 @@ export default function UpcomingEvents() {
           } relative`}
         >
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Pagination]}
             spaceBetween={20}
             slidesPerView={1}
+            pagination={true}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             {events.map((event, index) => (

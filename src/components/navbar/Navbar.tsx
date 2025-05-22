@@ -20,32 +20,23 @@ const Navbar = () => {
   const toggleDropdown = (index) => {
     setOpenDropdownIndex(openDropdownIndex === index ? null : index);
   };
+
   const navItems = [
     {
       label: "Admissions",
-      href: "/admissions",
       dropdown: [
-        { label: "Apply Now", href: "/admissions/apply" },
         {
-          label: "Undergraduate Admissions",
-          href: "/admissions/undergraduate",
+          label: "Undergraduate",
+          href: "/admission/undergraduate",
         },
-        { label: "Graduate Admissions", href: "/admissions/graduate" },
-        { label: "International Students", href: "/admissions/international" },
-        { label: "Requirements", href: "/admissions/requirements" },
-        {
-          label: "Scholarships & Financial Aid",
-          href: "/admissions/scholarships",
-        },
-        { label: "Deadlines", href: "/admissions/deadlines" },
-        { label: "Campus Visits", href: "/admissions/visits" },
-        { label: "FAQ", href: "/admissions/faq" },
+        { label: "Graduate", href: "/admission/graduate" },
+        { label: "International Students", href: "/admission/international" },
+        { label: "Certificate Programs", href: "/admission/international" },
       ],
     },
 
     {
       label: "Academics",
-      href: "/academics",
       dropdown: [
         { label: "Undergraduate Programs", href: "/academics/undergraduate" },
         { label: "Graduate Programs", href: "/academics/graduate" },
@@ -62,7 +53,6 @@ const Navbar = () => {
 
     {
       label: "Events",
-      href: "/events",
       dropdown: [
         { label: "All Events", href: "/events/calendar" },
         { label: "Academic Events", href: "/events/academic" },
@@ -77,9 +67,8 @@ const Navbar = () => {
 
     {
       label: "About",
-      href: "/about",
       dropdown: [
-        { label: "University Info", href: "/about/university" },
+        { label: "University", href: "/about/university" },
         { label: "History", href: "/about/history" },
         { label: "Vision & Mission", href: "/about/vision-mission" },
         { label: "Leadership", href: "/about/leadership" },
@@ -92,7 +81,6 @@ const Navbar = () => {
 
     {
       label: "Contact",
-      href: "/contact",
       dropdown: [
         { label: "General Inquiries", href: "/contact/general" },
         { label: "Admissions Office", href: "/contact/admissions" },
@@ -114,104 +102,105 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="sticky top-0 bg-[#008080] dark:bg-[#161929] shadow-md w-full left-0 font-roboto"
+        className="sticky top-0 w-full left-0 font-roboto shadow"
         style={{ zIndex: 9999 }}
       >
-        <div className="w-11/12 mx-auto">
-          <div className="flex justify-between items-center">
-            {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <span className="title-text text-white hover:text-[#B0BEC5]">
-                EduHeritage
-              </span>
-            </Link>
+        <div className="bg-[#008080] dark:bg-[#161929] shadow-md w-full font-roboto">
+          <div className="w-11/12 mx-auto py-[2px] sm:py-1 lg:py-2">
+            <div className="flex justify-between items-center">
+              {/* Logo */}
+              <Link href="/" className="flex items-center">
+                <span className="nav-title text-white hover:text-gray-600 nav-title">
+                  EduHeritage
+                </span>
+              </Link>
 
-            {/* Desktop Menu */}
-            <div className="flex justify-center items-center space-x-2 sm:space-x-3.5 md:space-x-6 roboto-slab">
-              <div className="hidden lg:flex items-center space-x-5 relative">
-                {navItems.map((item) =>
-                  item.dropdown ? (
-                    <div
-                      className="relative group hover:cursor-pointer"
-                      key={item?.label}
-                    >
-                      <button className="text-white paragraph-text hover:cursor-pointer hover:text-[#B0BEC5] font-medium py-5">
-                        {item.label}
-                      </button>
-                      {/* Dropdown Menu */}
-                      <div className="absolute -left-10 top-16 hidden bg-[#008080] dark:bg-[#161929] group-hover:block shadow-lg rounded-md w-auto space-y-2 py-2 px-5">
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.label}
-                            href={dropdownItem.href}
-                            className="block text-white hover:text-[#B0BEC5] text-nowrap dark:bg-[#161929]"
-                          >
-                            {dropdownItem.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <Link
-                      key={item.label}
-                      href={item.href}
-                      className="text-white hover:text-[#B0BEC5] font-medium dark:bg-[#161929] dark:bprder-b-2 border-white"
-                    >
-                      {item.label}
-                    </Link>
-                  )
-                )}
-              </div>
-              <button
-                onClick={toggleSearch}
-                className="rounded-lg hidden cursor-pointer md:flex items-center space-x-[6px] text-lg font-semibold py-1 px-[10px] hover:bg-white bg-transparent hover:text-[#008080] dark:hover:text-gray-800 text-white"
-              >
-                <FiSearch className="text-lg font-black" />
-                <h1>Search</h1>
-              </button>
-              <button
-                onClick={toggleSearch}
-                className=" text-white block md:hidden hover:text-[#B0BEC5] dark:hover:text-gray-800 cursor-pointer"
-              >
-                <FiSearch className="text-lg font-black" />
-              </button>
-              <div className="flex justify-center items-center space-x-2 sm:space-x-3.5 md:space-x-6 roboto-slab">
-                {user ? (
-                  <>
-                    <Link
-                      onClick={handleLogout}
-                      href="/"
-                      className="text-white hover:text-[#B0BEC5] paragraph-text"
-                    >
-                      Logout
-                    </Link>
-                  </>
-                ) : (
-                  <div className="hidden sm:flex space-x-2 sm:space-x-3 md:space-x-6 items-center">
-                    <Link
-                      href="/auth/login"
-                      className="text-white hover:text-[#B0BEC5] paragraph-text"
-                    >
-                      Login
-                    </Link>
-                  </div>
-                )}
-              </div>
-              {/* Mobile Hamburger */}
-              <div className="lg:hidden">
+              {/* Desktop Menu */}
+              <div className="flex justify-center items-center space-x-2 sm:space-x-3.5 md:space-x-6 font-roboto paragraph-text">
                 <button
-                  onClick={() => setMenuOpen(!menuOpen)}
-                  className="text-white hover:text-[#B0BEC5] focus:outline-none py-5"
+                  onClick={toggleSearch}
+                  className="rounded-lg hidden cursor-pointer md:flex items-center space-x-[6px] py-1 px-[10px] hover:bg-white bg-transparent hover:text-[#008080] dark:hover:text-gray-800 text-white"
                 >
-                  {menuOpen ? (
-                    <FaTimes className="sm:text-xl md:text-lg" />
-                  ) : (
-                    <FaBars className="sm:text-xl md:text-lg" />
-                  )}
+                  <FiSearch className=" font-black" />
+                  <h1>Search</h1>
                 </button>
+                <button
+                  onClick={toggleSearch}
+                  className=" text-white block md:hidden hover:text-gray-600 dark:hover:text-gray-800 cursor-pointer"
+                >
+                  <FiSearch className="font-black" />
+                </button>
+                <div className="flex justify-center items-center space-x-2 sm:space-x-3.5 md:space-x-6">
+                  {user ? (
+                    <>
+                      <Link
+                        onClick={handleLogout}
+                        href="/"
+                        className="text-white hover:text-gray-600"
+                      >
+                        Logout
+                      </Link>
+                    </>
+                  ) : (
+                    <div className="hidden sm:flex space-x-2 sm:space-x-3 md:space-x-6 items-center">
+                      <Link
+                        href="/auth/login"
+                        className="text-white hover:text-gray-600"
+                      >
+                        Login
+                      </Link>
+                    </div>
+                  )}
+                </div>
+                {/* Mobile Hamburger */}
+                <div className="lg:hidden">
+                  <button
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    className="text-white hover:text-gray-600 focus:outline-none py-5"
+                  >
+                    {menuOpen ? (
+                      <FaTimes className="sm:text-xl md:text-lg" />
+                    ) : (
+                      <FaBars className="sm:text-xl md:text-lg" />
+                    )}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="hidden lg:flex items-center justify-center lg:text-sm xl:text-lg space-x-3 relative bg-white dark:bg-[#1a1d2e] dark:border-b dark:border-[#2f3243] dark:shadow-md">
+          {navItems.map((item) =>
+            item.dropdown ? (
+              <div
+                className="relative group hover:cursor-pointer"
+                key={item?.label}
+              >
+                <button className="text-gray-800 dark:text-gray-200 px-6 xl:px-8 py-2 rounded-md transition-colors duration-200 hover:text-[#008080] dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-[#2a2f45] font-medium">
+                  {item.label}
+                </button>
+                {/* Dropdown Menu */}
+                <div className="absolute top-[44px] hidden lg:text-sm xl:text-lg bg-white dark:bg-[#1e1e2f] group-hover:block shadow-lg w-auto py-2 px-5 rounded-b-md dark:border dark:border-gray-700">
+                  {item.dropdown.map((dropdownItem) => (
+                    <Link
+                      key={dropdownItem.label}
+                      href={dropdownItem.href}
+                      className="block text-gray-800 dark:text-gray-200 hover:text-[#008080] dark:hover:text-gray-200 text-nowrap rounded px-3 py-2 transition-colors duration-200"
+                    >
+                      {dropdownItem.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div
+                key={item.label}
+                className="text-white hover:text-gray-600 font-medium dark:bg-[#161929] dark:bprder-b-2 border-white"
+              >
+                {item.label}
+              </div>
+            )
+          )}
         </div>
 
         {/* Mobile Menu */}
@@ -239,7 +228,7 @@ const Navbar = () => {
                 ? "border-y-[0.050px] border-transparent hover:border-white"
                 : ""
             }
-            hover:text-[#B0BEC5] transition-all duration-300 ease-in-out
+            hover:text-gray-600 transition-all duration-300 ease-in-out
           `}
                   onClick={() => toggleDropdown(index)}
                 >
@@ -260,7 +249,7 @@ const Navbar = () => {
                       <Link
                         key={dropdownItem.label}
                         href={dropdownItem.href}
-                        className="block text-white hover:text-[#B0BEC5] px-2 sm:px-5 sm:text-nowrap"
+                        className="block text-white hover:text-gray-600 px-2 sm:px-5 sm:text-nowrap"
                       >
                         {dropdownItem.label}
                       </Link>
@@ -272,7 +261,7 @@ const Navbar = () => {
 
             {user ? (
               <>
-                <Link href="/" className="text-white hover:text-[#B0BEC5]">
+                <Link href="/" className="text-white hover:text-gray-600">
                   <h1
                     onClick={() => {
                       setMenuOpen(false);
@@ -288,7 +277,7 @@ const Navbar = () => {
               <div className="flex flex-col sm:hidden">
                 <Link
                   href="/auth/login"
-                  className="text-white hover:text-[#B0BEC5]"
+                  className="text-white hover:text-gray-600"
                 >
                   <h1
                     onClick={() => setMenuOpen(false)}
@@ -299,7 +288,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   href="/auth/register"
-                  className="text-white hover:text-[#B0BEC5]"
+                  className="text-white hover:text-gray-600"
                 >
                   <h1
                     onClick={() => setMenuOpen(false)}

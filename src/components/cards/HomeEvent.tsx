@@ -33,11 +33,11 @@ export default function HomeEvent({ event, index }: Props) {
       </div>
 
       {/* Text Side */}
-      <div className="w-11/12 mx-auto sm:flex-1 flex flex-col justify-center gap-4 md:gap-5 lg:gap-8 xl:gap-10 z-10 bg-white dark:bg-[#161929]">
-        <h3 className="text-[24px] sm:text-[30px] md:text-[24px] xl:text-[60px] font-bold  text-gray-800 dark:text-white">
+      <div className="w-11/12 mx-auto sm:flex-1 flex flex-col justify-center gap-4 md:gap-5 lg:gap-8 z-10 bg-white dark:bg-[#161929]">
+        <h3 className="title-text text-gray-800 dark:text-white">
           {event.title}
         </h3>
-        <p className="text-gray-600 dark:text-white text-[16px] sm:text-[14px] md:text-[16px] lg:text-[30px]">
+        <p className="text-gray-600 dark:text-white paragraph-text">
           {event.description}
         </p>
         <div className="flex flex-row flex-wrap gap-[14px] md:gap-2 lg:gap-4 text-sm lg:text-xl text-gray-700 dark:text-white mt-2">
