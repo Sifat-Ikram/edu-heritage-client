@@ -75,7 +75,7 @@ export default function OverviewPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] w-full">
         <Image
-          src="https://i.ibb.co/ycPVPgL8/682940.jpg"
+          src="https://i.ibb.co/B2QhbC7C/oxford-6-most-stunning-university-campuses-in-uk-m121020-p.webp"
           alt="Campus"
           fill
           className="object-cover object-center brightness-75"
@@ -98,7 +98,7 @@ export default function OverviewPage() {
       </section>
 
       {/* Feature Cards Section */}
-      <section className="py-16 px-4 md:px-10 lg:px-20">
+      <section className="py-10 px-4 md:px-10 lg:px-20">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -166,16 +166,16 @@ export default function OverviewPage() {
       </section>
 
       {/* Career pathways */}
-      <section className="relative py-16 px-4 md:px-10 lg:px-20 text-white overflow-hidden">
+      <section className="relative py-10 px-4 md:px-10 lg:px-20 text-white overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://i.ibb.co/Y7YpQwxX/pexels-repuding-12064.jpg"
+            src="https://i.ibb.co/kVtDV0d8/QUB-010719-1640a.jpg"
             alt="Career Background"
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/30 bg-opacity-60 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-black/30 bg-opacity-60"></div>
         </div>
 
         {/* Content */}
@@ -255,7 +255,7 @@ export default function OverviewPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 px-4 md:px-10 lg:px-20 bg-[#008080] dark:bg-white dark:text-gray-800 text-white text-center">
+      <section className="py-10 px-4 md:px-10 lg:px-20 bg-[#008080] dark:bg-white dark:text-gray-800 text-white text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -274,7 +274,7 @@ export default function OverviewPage() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-16 px-4 md:px-10 lg:px-20">
+      <section className="py-10 px-4 md:px-10 lg:px-20">
         <div className="max-w-5xl mx-auto text-center">
           <motion.h3
             initial={{ opacity: 0, y: 30 }}

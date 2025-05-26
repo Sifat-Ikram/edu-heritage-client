@@ -67,7 +67,7 @@ const Navbar = () => {
         },
         { label: "How to Apply", href: "/admission/howToApply" },
         { label: "Tution and fees", href: "/admission/tutionFee" },
-        { label: "Scholarships & Aid", href: "/admission/scholarshipsAid" },
+        { label: "Scholarships & Aid", href: "/admission/scholarships" },
         { label: "Dates & Deadlines", href: "/admission/datesDeadlines" },
       ],
     },
