@@ -122,7 +122,7 @@ export default function UpcomingEvents() {
   }, []);
 
   return (
-    <section className="relative dark:bg-[#161929] w-11/12 mx-auto font-roboto">
+    <section className="relative dark:bg-[#161929] w-11/12 mx-auto font-roboto bg-gradient-to-b from-gray-100 via-white to-gray-100">
       <div className="w-full space-y-6 sm:space-y-10 md:space-y-14 lg:space-y-20">
         <div className="flex flex-col">
           <h2 className="title-text text-center text-gray-800 dark:text-white">

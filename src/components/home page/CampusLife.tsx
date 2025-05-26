@@ -66,20 +66,6 @@ export default function CampusLife() {
   return (
     <section className="bg-white w-11/12 mx-auto dark:bg-[#161929] font-roboto">
       <div className="w-full space-y-6 sm:space-y-10 md:space-y-14 lg:space-y-20">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <h2 className="title-text text-gray-800 dark:text-white">
-            Photo Gallery
-          </h2>
-        </motion.div>
-
-        {/* Masonry Gallery */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 sm:gap-4 space-y-3 sm:space-y-4">
           {images.map((img, index) => (
             <motion.div

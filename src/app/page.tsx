@@ -11,17 +11,19 @@ import UpcomingEvents from "@/components/home page/UpcomingEvents";
 
 export default function Home() {
   return (
-    <div className="flex flex-col space-y-20 lg:space-y-28 xl:space-y-40 dark:bg-[#161929]">
+    <main className="flex flex-col bg-gray-100 dark:bg-[#161929]">
       <Banner />
-      <AboutSection />
-      <FeaturedPrograms />
-      <AdmissionsCall />
-      <UpcomingEvents />
-      <CampusLife />
-      <ResearchProjects />
-      <QuestionAnswer />
-      <TestimonialCarousel />
-      <FindUs />
-    </div>
+      <div className="flex flex-col space-y-20 lg:space-y-28 xl:space-y-40">
+        <AboutSection />
+        <FeaturedPrograms />
+        <AdmissionsCall />
+        <UpcomingEvents />
+        <CampusLife />
+        <ResearchProjects />
+        <TestimonialCarousel />
+        <FindUs />
+        <QuestionAnswer />
+      </div>
+    </main>
   );
 }

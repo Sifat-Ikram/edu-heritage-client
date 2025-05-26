@@ -1,13 +1,20 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-import banner from "../../assets/banner.webp";
 
 const Banner = () => {
   return (
-    <section className="overflow-hidden py-8 dark:bg-[#161929] font-roboto">
-      <div className="w-11/12 mx-auto flex font-roboto flex-col-reverse lg:flex-row items-center lg:justify-between lg:gap-12">
+    <section
+      className="relative overflow-hidden min-h-screen dark:bg-[#161929] font-roboto bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('https://i.ibb.co/q32LShY4/photo-1554473675-d0904f3cbf38-fm-jpg-q-60-w-3000-ixlib-rb-4-1.jpg')",
+      }}
+    >
+      {/* Dark Overlay */}
+      <div className="absolute top-0 bottom-0 inset-0 bg-black/60 bg-opacity-50 z-10"></div>
+
+      <div className="relative z-20 w-11/12 max-w-7xl text-white mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-8 py-40">
         {/* Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -46,36 +53,7 @@ const Banner = () => {
                 </button>
               </Link>
             </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className=""
-            >
-              <Link href="/about">
-                <button className="buttons btn-learn hover:bg-teal-700 hover:text-white dark:bg-transparent dark:!border-white dark:!text-white dark:hover:!bg-white dark:hover:!text-gray-800">
-                  Learn More
-                </button>
-              </Link>
-            </motion.div>
           </div>
-        </motion.div>
-
-        {/* Image */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="w-full lg:w-1/2 xl:w-2/5 flex max-lg:justify-center"
-        >
-          <Image
-            src={banner}
-            alt="University Campus"
-            width={600}
-            height={600}
-            className="rounded-xl shadow-xl object-cover h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] w-full"
-            priority
-          />
         </motion.div>
       </div>
     </section>

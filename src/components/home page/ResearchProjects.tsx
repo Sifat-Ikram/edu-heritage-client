@@ -118,13 +118,14 @@ export default function ResearchProjects() {
   }, []);
 
   return (
-    <section className="w-full max-sm:px-5 bg-white dark:bg-[#161929] font-roboto space-y-6 sm:space-y-10 md:space-y-14 lg:space-y-20">
-      <div className="text-center">
+    <section className="w-full max-sm:px-5 dark:bg-[#161929] font-roboto space-y-6 sm:space-y-10 md:space-y-14 lg:space-y-20">
+      <div className="text-center dark:bg-[#161929]">
         <h2 className="title-text text-gray-800 dark:text-white">
-          Research Highlights
+          Innovation & Discovery
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mt-3 paragraph-text">
-          Explore groundbreaking research from our leading faculty and students.
+          Dive into transformative research shaping the future — driven by our
+          brilliant minds and bold ideas.
         </p>
       </div>
 

@@ -18,7 +18,7 @@ export default function HomeEvent({ event, index }: Props) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="flex flex-col pb-5 sm:flex-row gap-6 md:gap-8 lg:gap-10 bg-white dark:bg-[#161929] overflow-hidden transition-shadow duration-300 w-full"
+      className="flex flex-col pb-5 sm:flex-row gap-6 md:gap-8 lg:gap-10 dark:bg-[#161929] overflow-hidden transition-shadow duration-300 w-full"
     >
       {/* Image Side */}
       <div className="w-11/12 max-sm:mx-auto sm:w-1/2 relative h-[250px] sm:h-[280px] md:h-[300px] lg:h-[400px]">
@@ -33,7 +33,7 @@ export default function HomeEvent({ event, index }: Props) {
       </div>
 
       {/* Text Side */}
-      <div className="w-11/12 mx-auto sm:flex-1 flex flex-col justify-center gap-4 md:gap-5 lg:gap-8 z-10 bg-white dark:bg-[#161929]">
+      <div className="w-11/12 mx-auto sm:flex-1 flex flex-col justify-center gap-4 md:gap-5 lg:gap-8 z-10 dark:bg-[#161929]">
         <h3 className="title-text text-gray-800 dark:text-white">
           {event.title}
         </h3>

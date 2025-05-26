@@ -17,7 +17,7 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-[#008080] text-white dark:text-white dark:bg-[#161929] w-full font-roboto  pt-14 lg:pt-20 xl:pt-32 pb-8 lg:pb-10 xl:pb-16 space-y-8 lg:space-y-14 xl:space-y-20"
+      className="bg-[#008080] text-white dark:text-white dark:bg-[#161929] w-full font-roboto pt-8 lg:pt-10 xl:pt-14 2xl:pt-[70px] pb-3 space-y-8 lg:space-y-14 xl:space-y-20"
     >
       <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
         {/* About */}
@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="text-center text-sm lg:text-lg xl:text-[28px] mt-10 border-t border-white/40 pt-6 lg:pt- xl:pt-12">
+      <div className="text-center text-[9] sm:text-xs lg:text-sm xl:text-lg mt-10 border-t border-white/40 pt-3">
         © {new Date().getFullYear()} Edu Heritage University. All rights
         reserved.
       </div>

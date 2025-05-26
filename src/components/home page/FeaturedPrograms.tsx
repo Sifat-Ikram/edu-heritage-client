@@ -116,7 +116,7 @@ export default function FeaturedPrograms() {
   }, []);
 
   return (
-    <section className="w-full font-roboto max-sm:px-5 bg-white dark:bg-[#161929] space-y-6 sm:space-y-10 md:space-y-14 lg:space-y-20">
+    <section className="w-full font-roboto max-sm:px-5 dark:bg-[#161929] space-y-6 sm:space-y-10 md:space-y-14 lg:space-y-20">
       <div className="text-center">
         <h2 className="title-text text-gray-800 dark:text-white">
           Academic Programs

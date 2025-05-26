@@ -11,7 +11,7 @@ const FindUs: React.FC = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="w-11/12 mx-auto font-roboto mb-20"
+      className="w-11/12 mx-auto font-roboto"
     >
       <div className="flex flex-col items-center space-y-6 sm:space-y-10 md:space-y-14 lg:space-y-20">
         <div className="flex flex-col space-y-5 items-center">

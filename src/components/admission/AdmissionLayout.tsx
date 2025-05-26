@@ -14,7 +14,7 @@ export default function AdmissionLayout({ children }: AdmissionLayoutProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="space-y-16"
+        className="space-y-4 sm:space-y-7 lg:space-y-10 xl:space-y-16"
       >
         {children}
       </motion.div>
