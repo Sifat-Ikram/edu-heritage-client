@@ -71,7 +71,7 @@ const pathways = [
 
 export default function OverviewPage() {
   return (
-    <main className="bg-gray-50 dark:bg-[#161929] text-gray-800 dark:text-white flex flex-col space-y-20 lg:space-y-28 xl:space-y-40">
+    <main className="bg-gray-50 dark:bg-[#161929] text-gray-800 dark:text-white flex flex-col space-y-8 sm:space-y-14 lg:space-y-20 2xl:space-y-40">
       {/* Hero Section */}
       <section className="relative h-[60vh] w-full">
         <Image

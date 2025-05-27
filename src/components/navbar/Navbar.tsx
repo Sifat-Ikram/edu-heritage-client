@@ -63,28 +63,22 @@ const Navbar = () => {
       dropdown: [
         {
           label: "Overview",
-          href: "admission/overview",
+          href: "/admission/overview",
         },
         { label: "How to Apply", href: "/admission/howToApply" },
         { label: "Tution and fees", href: "/admission/tutionFee" },
         { label: "Scholarships & Aid", href: "/admission/scholarships" },
-        { label: "Dates & Deadlines", href: "/admission/datesDeadlines" },
       ],
     },
 
     {
       label: "Academics",
       dropdown: [
-        { label: "Undergraduate Programs", href: "/academics/undergraduate" },
-        { label: "Graduate Programs", href: "/academics/graduate" },
-        { label: "Departments", href: "/academics/departments" },
-        { label: "Degree Programs", href: "/academics/programs" },
-        { label: "Online Courses", href: "/academics/online-courses" },
-        { label: "Research Opportunities", href: "/academics/research" },
+        { label: "Undergraduate", href: "/academics/undergraduate" },
+        { label: "Graduate", href: "/academics/graduate" },
         { label: "Course Catalog", href: "/academics/catalog" },
+        { label: "Research Opportunities", href: "/academics/research" },
         { label: "Course Registration", href: "/academics/registration" },
-        { label: "Academic Calendar", href: "/academics/calendar" },
-        { label: "Faculty Directory", href: "/academics/faculty" },
       ],
     },
 

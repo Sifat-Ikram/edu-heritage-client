@@ -1,8 +1,8 @@
-export interface AcademicCardProps {
-  item: {
-    title: string;
-    description: string;
-    image: string;
-    link: string;
-  };
+export interface UndergraduateProgram {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  iconKey: string;
+  image: string;
 }

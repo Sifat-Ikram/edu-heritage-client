@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   FaWpforms,
   FaCheckCircle,
@@ -45,7 +46,7 @@ const steps = [
 
 export default function HowToApplyPage() {
   return (
-    <main className="bg-white text-gray-900 dark:bg-[#161929] dark:text-white flex flex-col space-y-20 lg:space-y-28 xl:space-y-40">
+    <main className="bg-white text-gray-900 dark:bg-[#161929] dark:text-white flex flex-col space-y-8 sm:space-y-14 lg:space-y-20 2xl:space-y-40">
       {/* Banner */}
       <section
         className="relative bg-cover bg-center h-[400px] flex items-center justify-center text-white"
@@ -63,7 +64,7 @@ export default function HowToApplyPage() {
       {/* Intro */}
       <section className="text-center">
         <div className="max-w-4xl mx-auto">
-          <p className="paragraph-text leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl xl:text-xl 2xl:text-2xl font-semibold text-gray-700 dark:text-white">
             At Edu Heritage, we practice holistic admission. This means that
             each piece in your application is reviewed as part of an integrated
             and comprehensive whole.
@@ -177,9 +178,9 @@ export default function HowToApplyPage() {
                 March 1 – <span className="text-[#008080]">All continuing</span>
               </li>
             </ul>
-            <button className="mt-6 buttons btn-learn">
+            <Link href={"/admission/scholarships"} className="mt-6 buttons btn-learn">
               Visit Financial Aid
-            </button>
+            </Link>
           </div>
         </div>
       </section>
