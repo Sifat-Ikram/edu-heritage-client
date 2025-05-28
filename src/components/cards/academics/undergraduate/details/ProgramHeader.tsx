@@ -1,7 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
-import { FaArrowLeft } from "react-icons/fa";
 import { UndergraduateProgram } from "@/types/academics";
+import Image from "next/image";
 
 export default function ProgramHeader({
   program,
@@ -9,32 +7,17 @@ export default function ProgramHeader({
   program: UndergraduateProgram;
 }) {
   return (
-    <>
-      <Link
-        href="/academics/undergraduate"
-        className="text-teal-700 flex items-center gap-2 mb-6 hover:underline"
-      >
-        <FaArrowLeft />
-        Back to Programs
-      </Link>
-      <div className="grid md:grid-cols-2 gap-10 mb-12">
-        <Image
-          src={program.image}
-          alt={program.title}
-          width={800}
-          height={600}
-          className="rounded-lg w-full object-cover shadow-md"
-        />
-        <div>
-          <h1 className="text-4xl font-bold text-teal-700 mb-2">
-            {program.title}
-          </h1>
-          <p className="text-lg">{program.description}</p>
-          <p className="mt-2 text-sm text-teal-600 font-semibold uppercase tracking-wider">
-            {program.category}
-          </p>
-        </div>
+    <div className="relative h-[300px] md:h-[400px] w-full">
+      <Image
+        src={program.image}
+        alt={program.title}
+        fill
+        className="object-cover brightness-[0.5]"
+      />
+      <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-16 text-white">
+        <h1 className="title-text font-bold mb-2">{program.title}</h1>
+        <p className="paragraph-text">{program.description}</p>
       </div>
-    </>
+    </div>
   );
 }

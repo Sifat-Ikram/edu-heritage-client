@@ -9,7 +9,9 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
       "Computer Science program focusing on modern techniques and practical knowledge.",
     category: "Technology",
     iconKey: "code",
-    image: "/images/undergraduate/computer_science.jpg",
+    image: "https://i.ibb.co/XkpnFsc6/Programming-in-Computer-Science.jpg",
+    details:
+      "The Computer Science program offers a comprehensive curriculum that delves into the theoretical foundations and practical applications of computing. Students will explore areas such as algorithms, data structures, software engineering, artificial intelligence, and machine learning. The program emphasizes problem-solving skills, critical thinking, and the ability to design and implement efficient software solutions. Through hands-on projects and collaborative learning, students will gain experience in various programming languages and development tools. The curriculum is designed to keep pace with the rapidly evolving tech industry, ensuring that graduates are well-equipped to tackle contemporary challenges in computing. Career opportunities for graduates include roles in software development, systems analysis, data science, and research.",
   },
   {
     id: 2,
@@ -18,7 +20,9 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
       "Information Systems program focusing on modern techniques and practical knowledge.",
     category: "Technology",
     iconKey: "code",
-    image: "/images/undergraduate/information_systems.jpg",
+    image: "https://i.ibb.co/pBtzCkv1/img1.png",
+    details:
+      "The Information Systems program bridges the gap between business processes and information technology. Students will learn how to design, implement, and manage information systems that support organizational operations and decision-making. The curriculum covers topics such as database management, systems analysis, cybersecurity, and enterprise systems. Emphasis is placed on understanding the strategic role of information systems in achieving business objectives. Through case studies and real-world projects, students will develop skills in project management, systems integration, and IT governance. Graduates will be prepared for careers as systems analysts, IT consultants, and information systems managers.",
   },
   {
     id: 3,
@@ -27,7 +31,10 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
       "Software Engineering program focusing on modern techniques and practical knowledge.",
     category: "Technology",
     iconKey: "code",
-    image: "/images/undergraduate/software_engineering.jpg",
+    image:
+      "https://i.ibb.co/6cSw9r3d/taylors-professional-studies-acca-fia-hero-banner-1920x1080.png",
+    details:
+      "The Software Engineering program focuses on the systematic development and maintenance of software systems. Students will study software development life cycles, design methodologies, testing, and quality assurance. The curriculum includes courses on programming languages, software architecture, and project management. Emphasis is placed on collaborative development practices, including agile methodologies and version control systems. Students will engage in team-based projects that simulate real-world software development scenarios. The program aims to produce graduates who can deliver reliable, efficient, and scalable software solutions. Career paths include roles as software engineers, quality assurance analysts, and project managers.",
   },
   {
     id: 4,
@@ -36,7 +43,9 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
       "Cybersecurity program focusing on modern techniques and practical knowledge.",
     category: "Technology",
     iconKey: "code",
-    image: "/images/undergraduate/cybersecurity.jpg",
+    image: "https://i.ibb.co/3qkj8m4/banner-dep-1-1-9-1.png",
+    details:
+      "The Cybersecurity program addresses the growing need for professionals who can protect information systems from cyber threats. Students will learn about network security, cryptography, risk assessment, and incident response. The curriculum emphasizes both the technical and managerial aspects of cybersecurity, including policy development and compliance. Practical labs and simulations provide hands-on experience in identifying vulnerabilities and implementing security measures. Students will also explore ethical and legal considerations in cybersecurity. Graduates will be equipped to pursue careers as security analysts, penetration testers, and cybersecurity consultants.",
   },
   {
     id: 5,
@@ -45,7 +54,9 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
       "Artificial Intelligence program focusing on modern techniques and practical knowledge.",
     category: "Technology",
     iconKey: "code",
-    image: "/images/undergraduate/artificial_intelligence.jpg",
+    image: "https://i.ibb.co/rGdDZG43/buisness.jpg",
+    details:
+      "The Artificial Intelligence program delves into the principles and applications of AI technologies. Students will study machine learning, natural language processing, computer vision, and robotics. The curriculum combines theoretical foundations with practical implementations, enabling students to develop intelligent systems that can learn and adapt. Projects and labs provide experience in building AI models and deploying them in various domains. Ethical considerations and the societal impact of AI are also explored. Graduates will be prepared for roles in AI research, data science, and AI system development across industries.",
   },
   {
     id: 6,
@@ -54,7 +65,9 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
       "Game Development program focusing on modern techniques and practical knowledge.",
     category: "Technology",
     iconKey: "code",
-    image: "/images/undergraduate/game_development.jpg",
+    image: "https://i.ibb.co/qYfNnbqQ/What-does-undergraduate-mean-02.webp",
+    details:
+      "The Game Development program offers an interdisciplinary approach to designing and creating interactive digital games. Students will learn about game design principles, programming, graphics, and user experience. The curriculum includes courses on 2D and 3D game development, storytelling, and audio design. Emphasis is placed on collaborative projects where students conceptualize and develop games from inception to deployment. The program also explores the business aspects of the gaming industry, including marketing and monetization strategies. Graduates can pursue careers as game developers, designers, and producers in the entertainment and educational sectors.",
   },
   {
     id: 7,
@@ -63,7 +76,9 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
       "Data Science program focusing on modern techniques and practical knowledge.",
     category: "Technology",
     iconKey: "code",
-    image: "/images/undergraduate/data_science.jpg",
+    image: "https://i.ibb.co/XkpnFsc6/Programming-in-Computer-Science.jpg",
+    details:
+      "The Data Science program equips students with the skills to analyze and interpret complex data. The curriculum covers statistics, machine learning, data visualization, and big data technologies. Students will learn to use programming languages and tools for data analysis and predictive modeling. Emphasis is placed on real-world applications, including projects that address problems in business, healthcare, and social sciences. Ethical considerations in data handling and privacy are also discussed. Graduates will be prepared for careers as data analysts, data scientists, and business intelligence professionals.",
   },
 
   // Social Sciences
@@ -75,6 +90,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Social Sciences",
     iconKey: "brain",
     image: "/images/undergraduate/psychology.jpg",
+    details: "",
   },
   {
     id: 9,
@@ -83,7 +99,8 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
       "Sociology program focusing on modern techniques and practical knowledge.",
     category: "Social Sciences",
     iconKey: "brain",
-    image: "/images/undergraduate/sociology.jpg",
+    image: "https://i.ibb.co/XkpnFsc6/Programming-in-Computer-Science.jpg",
+    details: "",
   },
   {
     id: 10,
@@ -93,6 +110,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Social Sciences",
     iconKey: "brain",
     image: "/images/undergraduate/political_science.jpg",
+    details: "",
   },
   {
     id: 11,
@@ -102,6 +120,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Social Sciences",
     iconKey: "brain",
     image: "/images/undergraduate/anthropology.jpg",
+    details: "",
   },
   {
     id: 12,
@@ -111,6 +130,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Social Sciences",
     iconKey: "brain",
     image: "/images/undergraduate/international_relations.jpg",
+    details: "",
   },
   {
     id: 13,
@@ -120,6 +140,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Social Sciences",
     iconKey: "brain",
     image: "/images/undergraduate/criminology.jpg",
+    details: "",
   },
   {
     id: 14,
@@ -128,7 +149,8 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
       "Cognitive Science program focusing on modern techniques and practical knowledge.",
     category: "Social Sciences",
     iconKey: "brain",
-    image: "/images/undergraduate/cognitive_science.jpg",
+    image: "https://i.ibb.co/XkpnFsc6/Programming-in-Computer-Science.jpg",
+    details: "",
   },
 
   // Sciences
@@ -140,6 +162,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Sciences",
     iconKey: "flask",
     image: "/images/undergraduate/biotechnology.jpg",
+    details: "",
   },
   {
     id: 16,
@@ -149,6 +172,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Sciences",
     iconKey: "flask",
     image: "/images/undergraduate/physics.jpg",
+    details: "",
   },
   {
     id: 17,
@@ -158,6 +182,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Sciences",
     iconKey: "flask",
     image: "/images/undergraduate/chemistry.jpg",
+    details: "",
   },
   {
     id: 18,
@@ -167,6 +192,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Sciences",
     iconKey: "flask",
     image: "/images/undergraduate/mathematics.jpg",
+    details: "",
   },
   {
     id: 19,
@@ -176,6 +202,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Sciences",
     iconKey: "flask",
     image: "/images/undergraduate/environmental_science.jpg",
+    details: "",
   },
   {
     id: 20,
@@ -185,6 +212,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Sciences",
     iconKey: "flask",
     image: "/images/undergraduate/astronomy.jpg",
+    details: "",
   },
   {
     id: 21,
@@ -194,6 +222,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Sciences",
     iconKey: "flask",
     image: "/images/undergraduate/geology.jpg",
+    details: "",
   },
 
   // Business
@@ -205,6 +234,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Business",
     iconKey: "briefcase",
     image: "/images/undergraduate/business_studies.jpg",
+    details: "",
   },
   {
     id: 23,
@@ -214,6 +244,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Business",
     iconKey: "briefcase",
     image: "/images/undergraduate/marketing.jpg",
+    details: "",
   },
   {
     id: 24,
@@ -223,6 +254,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Business",
     iconKey: "briefcase",
     image: "/images/undergraduate/finance.jpg",
+    details: "",
   },
   {
     id: 25,
@@ -232,6 +264,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Business",
     iconKey: "briefcase",
     image: "/images/undergraduate/economics.jpg",
+    details: "",
   },
   {
     id: 26,
@@ -241,6 +274,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Business",
     iconKey: "briefcase",
     image: "/images/undergraduate/accounting.jpg",
+    details: "",
   },
   {
     id: 27,
@@ -250,6 +284,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Business",
     iconKey: "briefcase",
     image: "/images/undergraduate/entrepreneurship.jpg",
+    details: "",
   },
   {
     id: 28,
@@ -259,6 +294,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Business",
     iconKey: "briefcase",
     image: "/images/undergraduate/management.jpg",
+    details: "",
   },
 
   // Arts & Humanities
@@ -270,6 +306,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Arts & Humanities",
     iconKey: "palette",
     image: "/images/undergraduate/philosophy.jpg",
+    details: "",
   },
   {
     id: 30,
@@ -279,6 +316,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Arts & Humanities",
     iconKey: "palette",
     image: "/images/undergraduate/history.jpg",
+    details: "",
   },
   {
     id: 31,
@@ -288,6 +326,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Arts & Humanities",
     iconKey: "palette",
     image: "/images/undergraduate/literature.jpg",
+    details: "",
   },
   {
     id: 32,
@@ -297,6 +336,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Arts & Humanities",
     iconKey: "palette",
     image: "/images/undergraduate/visual_arts.jpg",
+    details: "",
   },
   {
     id: 33,
@@ -306,6 +346,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Arts & Humanities",
     iconKey: "palette",
     image: "/images/undergraduate/performing_arts.jpg",
+    details: "",
   },
   {
     id: 34,
@@ -315,6 +356,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Arts & Humanities",
     iconKey: "palette",
     image: "/images/undergraduate/linguistics.jpg",
+    details: "",
   },
   {
     id: 35,
@@ -324,6 +366,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Arts & Humanities",
     iconKey: "palette",
     image: "/images/undergraduate/cultural_studies.jpg",
+    details: "",
   },
 
   // Engineering
@@ -335,6 +378,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Engineering",
     iconKey: "cogs",
     image: "/images/undergraduate/mechanical_engineering.jpg",
+    details: "",
   },
   {
     id: 37,
@@ -344,6 +388,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Engineering",
     iconKey: "cogs",
     image: "/images/undergraduate/electrical_engineering.jpg",
+    details: "",
   },
   {
     id: 38,
@@ -353,6 +398,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Engineering",
     iconKey: "cogs",
     image: "/images/undergraduate/civil_engineering.jpg",
+    details: "",
   },
   {
     id: 39,
@@ -362,6 +408,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Engineering",
     iconKey: "cogs",
     image: "/images/undergraduate/chemical_engineering.jpg",
+    details: "",
   },
   {
     id: 40,
@@ -371,6 +418,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Engineering",
     iconKey: "cogs",
     image: "/images/undergraduate/aerospace_engineering.jpg",
+    details: "",
   },
   {
     id: 41,
@@ -380,6 +428,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Engineering",
     iconKey: "cogs",
     image: "/images/undergraduate/biomedical_engineering.jpg",
+    details: "",
   },
   {
     id: 42,
@@ -389,6 +438,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Engineering",
     iconKey: "cogs",
     image: "/images/undergraduate/mechatronics.jpg",
+    details: "",
   },
 
   // Health & Medicine
@@ -400,6 +450,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Health & Medicine",
     iconKey: "heartbeat",
     image: "/images/undergraduate/nursing.jpg",
+    details: "",
   },
   {
     id: 44,
@@ -409,6 +460,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Health & Medicine",
     iconKey: "heartbeat",
     image: "/images/undergraduate/public_health.jpg",
+    details: "",
   },
   {
     id: 45,
@@ -418,6 +470,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Health & Medicine",
     iconKey: "heartbeat",
     image: "/images/undergraduate/pharmacy.jpg",
+    details: "",
   },
   {
     id: 46,
@@ -427,6 +480,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Health & Medicine",
     iconKey: "heartbeat",
     image: "/images/undergraduate/nutrition_science.jpg",
+    details: "",
   },
   {
     id: 47,
@@ -436,6 +490,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Health & Medicine",
     iconKey: "heartbeat",
     image: "/images/undergraduate/medical_lab_science.jpg",
+    details: "",
   },
   {
     id: 48,
@@ -445,6 +500,7 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Health & Medicine",
     iconKey: "heartbeat",
     image: "/images/undergraduate/physiotherapy.jpg",
+    details: "",
   },
   {
     id: 49,
@@ -454,5 +510,6 @@ export const undergraduatePrograms: UndergraduateProgram[] = [
     category: "Health & Medicine",
     iconKey: "heartbeat",
     image: "/images/undergraduate/occupational_therapy.jpg",
+    details: "",
   },
 ];

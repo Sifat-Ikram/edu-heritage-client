@@ -5,7 +5,7 @@ export default function UndergraduatePage() {
   return (
     <main className="bg-gray-50 dark:bg-[#161929] min-h-screen">
       <UndergraduateBanner />
-      <section className="w-11/12 mx-auto py-10">
+      <section className="pt-10">
         <ProgramCategorySection />
       </section>
     </main>

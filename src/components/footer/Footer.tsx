@@ -17,7 +17,7 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-[#008080] text-white dark:text-white dark:bg-[#161929] w-full font-roboto pt-8 lg:pt-10 xl:pt-14 2xl:pt-[70px] pb-3 space-y-8 lg:space-y-14 xl:space-y-20"
+      className="bg-[#008080] text-white dark:text-white dark:bg-[#161929] w-full font-roboto dark:border-t-[2px] border-solid border-gray-400 pt-8 lg:pt-10 xl:pt-14 2xl:pt-[70px] pb-3 space-y-8 lg:space-y-14 xl:space-y-20"
     >
       <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
         {/* About */}

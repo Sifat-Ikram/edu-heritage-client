@@ -7,7 +7,7 @@ export default function UndergraduateBanner() {
   return (
     <div className="relative h-[60vh] min-h-[400px] w-full">
       <Image
-        src="/images/undergraduate/hero.jpg"
+        src="https://i.ibb.co/VcF0xmPn/happy-woman-travel-london-big-600nw-222159805.webp"
         fill
         alt="Undergraduate Hero"
         className="object-cover w-full h-full absolute inset-0"
@@ -20,7 +20,7 @@ export default function UndergraduateBanner() {
           className="text-white max-w-3xl"
         >
           <h1 className="text-3xl sm:text-5xl font-bold">
-            Explore Our Undergraduate Programs
+            Our Undergraduate Programs
           </h1>
           <p className="text-sm sm:text-lg mt-4">
             Gain the skills, knowledge, and experience to shape your future and

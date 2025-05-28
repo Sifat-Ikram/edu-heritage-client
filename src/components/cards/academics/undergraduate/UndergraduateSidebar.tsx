@@ -12,7 +12,7 @@ export default function UndergraduateSidebar({
   onSelect,
 }: Props) {
   return (
-    <div className="sticky top-20 min-h-screen self-start block w-full z-10 md:w-1/5 pr-6 dark:bg-[#161929] md:dark:border-r-[4px] border-solid border-white space-y-6">
+    <div className="w-4/5 mx-auto self-start block sticky top-20 z-10 pr-6 dark:bg-[#161929] space-y-6">
       <h2 className="text-xl font-semibold text-teal-800 dark:text-white mb-4">
         Categories
       </h2>
